@@ -10,6 +10,12 @@ on:
       - "v*"
   workflow_dispatch:
 
+# tauri-action creates a draft Release and uploads bundles to it — that
+# requires write access to the repo's releases, which GITHUB_TOKEN does
+# not have by default ("Resource not accessible by integration" otherwise).
+permissions:
+  contents: write
+
 jobs:
   build:
     strategy:
