@@ -34,7 +34,6 @@
 | 平台    | 文件                 | 说明                                |
 | ------- | -------------------- | ----------------------------------- |
 | macOS   | `.dmg`               | 通用版——Apple Silicon + Intel 都能跑 |
-| Windows | `.msi`               | x86_64                              |
 | Linux   | `.AppImage` / `.deb` | x86_64                              |
 
 > macOS 暂未做公证（notarize），首次打开 Gatekeeper 会拦——右键 → **打开** 绕过，或终端跑 `xattr -cr /Applications/pixel-agents.app`。

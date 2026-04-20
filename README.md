@@ -31,11 +31,10 @@ This app consolidates all of them into **one screen**: each agent is a pixel cha
 
 Head over to [Releases](../../releases) and grab the pre-built installer for your platform:
 
-| Platform | File            | Notes                                         |
-| -------- | --------------- | --------------------------------------------- |
-| macOS    | `.dmg`          | Universal — runs on Apple Silicon + Intel     |
-| Windows  | `.msi`          | x86_64                                        |
-| Linux    | `.AppImage` / `.deb` | x86_64                                   |
+| Platform | File                 | Notes                                     |
+| -------- | -------------------- | ----------------------------------------- |
+| macOS    | `.dmg`               | Universal — runs on Apple Silicon + Intel |
+| Linux    | `.AppImage` / `.deb` | x86_64                                    |
 
 > The macOS build isn't notarized yet, so Gatekeeper will refuse to open it on first launch. Right-click the app → **Open** to bypass, or run `xattr -cr /Applications/pixel-agents.app` in Terminal.
 

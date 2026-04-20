@@ -28,9 +28,10 @@ jobs:
           - platform: ubuntu-22.04
             args: ""
             rust-targets: ""
-          - platform: windows-latest
-            args: ""
-            rust-targets: ""
+          # Windows is intentionally absent — ipc.rs uses UDS and reaper.rs
+          # uses `kill -0`, so src-tauri/src/lib.rs has a `compile_error!`
+          # guard for non-unix targets. Adding Windows back requires porting
+          # those modules to named pipes + OpenProcess.
     runs-on: ${{ matrix.platform }}
     steps:
       - uses: actions/checkout@v4
@@ -73,7 +74,6 @@ jobs:
             Download the build for your platform below.
 
             - **macOS** — `.dmg` (universal: Apple Silicon + Intel)
-            - **Windows** — `.msi`
             - **Linux** — `.AppImage` or `.deb`
 
             > macOS Gatekeeper will warn on first launch because the app is
