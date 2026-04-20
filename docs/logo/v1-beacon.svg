@@ -1,0 +1,12 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Variant 1: Status Beacon
+       Concentric rings radiating outward from a filled core. Reads as
+       "an agent that actively emits its state" — the core is the agent,
+       the expanding rings are its visible status. -->
+  <g fill="none" stroke="currentColor" stroke-linecap="round">
+    <circle cx="50" cy="50" r="32" stroke-width="1" stroke-dasharray="3 4" opacity="0.35"/>
+    <circle cx="50" cy="50" r="22" stroke-width="2.5"/>
+    <circle cx="50" cy="50" r="12" stroke-width="3.5"/>
+  </g>
+  <circle cx="50" cy="50" r="4.5" fill="currentColor"/>
+</svg>

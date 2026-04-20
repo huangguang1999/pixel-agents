@@ -26,3 +26,11 @@ src-tauri/gen/schemas
 *.njsproj
 *.sln
 *.sw?
+
+# Local README preview pages (generated via `python3 render_readme.py`)
+.readme-preview.html
+.readme-zh-preview.html
+
+# Scratch content inside the hook sandbox — config stays tracked, logs don't
+test-hook-sandbox/**/*.log
+test-hook-sandbox/testread.txt

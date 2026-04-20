@@ -1,0 +1,23 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Variant 6: Observed Node
+       A primary central node connected by curves to three observer
+       nodes at the periphery. Reads as "one agent whose state is
+       being watched from multiple angles" — literal visualization
+       relationship. Asymmetric placement keeps it dynamic. -->
+  <g fill="none" stroke="currentColor" stroke-linecap="round">
+    <!-- Edges: curved, varied weight -->
+    <path d="M 50 50 Q 38 32, 22 24" stroke-width="2"/>
+    <path d="M 50 50 Q 70 40, 82 26" stroke-width="2"/>
+    <path d="M 50 50 Q 58 72, 72 82" stroke-width="2"/>
+    <!-- Faint observation arcs behind, hinting at "watching" -->
+    <path d="M 30 50 A 20 20 0 0 1 70 50" stroke-width="1" opacity="0.25"/>
+  </g>
+  <g fill="currentColor">
+    <!-- Primary agent, largest -->
+    <circle cx="50" cy="50" r="7"/>
+    <!-- Observer nodes -->
+    <circle cx="22" cy="24" r="4"/>
+    <circle cx="82" cy="26" r="3.5"/>
+    <circle cx="72" cy="82" r="3"/>
+  </g>
+</svg>

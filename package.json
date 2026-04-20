@@ -2,27 +2,33 @@
   "name": "pixel-agents",
   "private": true,
   "version": "0.1.0",
+  "description": "See what your AI agents are up to — at a glance. A Tauri desktop app that visualizes Claude Code / Codex / Grok sessions as pixel characters in an office.",
+  "license": "MIT",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "tauri": "tauri"
+    "tauri": "tauri",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "dependencies": {
     "@tauri-apps/api": "^2",
     "@tauri-apps/plugin-opener": "^2",
-    "pixi.js": "^8.18.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "zustand": "^5.0.12"
   },
   "devDependencies": {
     "@tauri-apps/cli": "^2",
+    "@types/pngjs": "^6.0.5",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
     "@vitejs/plugin-react": "^4.6.0",
+    "pngjs": "^7.0.0",
     "typescript": "~5.8.3",
-    "vite": "^7.0.4"
+    "vite": "^7.0.4",
+    "vitest": "^2.1.9"
   }
 }

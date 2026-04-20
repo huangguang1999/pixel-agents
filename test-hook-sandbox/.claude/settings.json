@@ -1,0 +1,76 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "<PATH_TO_PIXEL_AGENTS_REPO>/scripts/claude-hook-forward.py"
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "<PATH_TO_PIXEL_AGENTS_REPO>/scripts/claude-hook-forward.py"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "<PATH_TO_PIXEL_AGENTS_REPO>/scripts/claude-hook-forward.py"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "<PATH_TO_PIXEL_AGENTS_REPO>/scripts/claude-hook-forward.py"
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "<PATH_TO_PIXEL_AGENTS_REPO>/scripts/claude-hook-forward.py"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "<PATH_TO_PIXEL_AGENTS_REPO>/scripts/claude-hook-forward.py"
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "<PATH_TO_PIXEL_AGENTS_REPO>/scripts/claude-hook-forward.py"
+          }
+        ]
+      }
+    ]
+  }
+}

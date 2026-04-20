@@ -13,11 +13,15 @@
     "windows": [
       {
         "title": "Pixel Agents Office",
-        "width": 1440,
-        "height": 900,
-        "minWidth": 1280,
-        "minHeight": 800,
+        "width": 640,
+        "height": 385,
+        "minWidth": 336,
+        "minHeight": 352,
         "resizable": true,
+        "decorations": true,
+        "titleBarStyle": "Overlay",
+        "hiddenTitle": true,
+        "transparent": false,
         "backgroundColor": "#11081a"
       }
     ],
@@ -34,6 +38,11 @@
       "icons/128x128@2x.png",
       "icons/icon.icns",
       "icons/icon.ico"
-    ]
+    ],
+    "resources": {
+      "../scripts/claude-hook-forward.py": "scripts/claude-hook-forward.py",
+      "../scripts/codex-hook-forward.py": "scripts/codex-hook-forward.py",
+      "../scripts/grok-hook-forward.py": "scripts/grok-hook-forward.py"
+    }
   }
 }

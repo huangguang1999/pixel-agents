@@ -1,0 +1,22 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Variant 3: CRT Scan Lines
+       Horizontal lines of varying weight clipped inside a rounded square.
+       Reads as a retro monitor showing "agent output". The thick middle
+       line is the focal point — the "live" state readout. -->
+  <defs>
+    <clipPath id="screen">
+      <rect x="20" y="22" width="60" height="56" rx="6"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#screen)" stroke="currentColor" stroke-linecap="round">
+    <line x1="22" y1="30" x2="78" y2="30" stroke-width="1.5"/>
+    <line x1="22" y1="36" x2="78" y2="36" stroke-width="1.5"/>
+    <line x1="22" y1="42" x2="78" y2="42" stroke-width="2"/>
+    <line x1="22" y1="48" x2="64" y2="48" stroke-width="2"/>
+    <line x1="22" y1="54" x2="78" y2="54" stroke-width="3.5"/>
+    <line x1="22" y1="60" x2="70" y2="60" stroke-width="2"/>
+    <line x1="22" y1="66" x2="78" y2="66" stroke-width="1.5"/>
+    <line x1="22" y1="72" x2="56" y2="72" stroke-width="1.5"/>
+  </g>
+  <rect x="20" y="22" width="60" height="56" rx="6" fill="none" stroke="currentColor" stroke-width="2.5"/>
+</svg>

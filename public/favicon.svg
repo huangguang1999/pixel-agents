@@ -1,0 +1,17 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Pixel Agents — app icon
+       Filled bars instead of stroked lines so it rasterizes cleanly at
+       small sizes (16-32px) where thin strokes disappear. Same CRT DNA:
+       rounded dark tile = window, light bars = status readout, thick
+       center bar = the current active state. -->
+  <rect x="6" y="6" width="88" height="88" rx="18" fill="#141018"/>
+  <rect x="18" y="22" width="64" height="56" rx="5" fill="#141018" stroke="#f0ece4" stroke-width="3"/>
+  <g fill="#f0ece4">
+    <rect x="22" y="29" width="56" height="4" rx="2"/>
+    <rect x="22" y="37" width="56" height="4" rx="2"/>
+    <rect x="22" y="45" width="40" height="4" rx="2"/>
+    <rect x="22" y="53" width="56" height="7" rx="3.5"/>
+    <rect x="22" y="64" width="46" height="4" rx="2"/>
+    <rect x="22" y="72" width="32" height="4" rx="2"/>
+  </g>
+</svg>

@@ -1,0 +1,27 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Variant 5: Status Badge
+       A rounded-square card (the "agent frame") with a dot-matrix
+       readout inside — the top-left corner has a brighter solid dot,
+       the rest are dimmed. Reads as a single agent's live status
+       glyph, framed for identity. -->
+  <rect x="18" y="18" width="64" height="64" rx="12" fill="none" stroke="currentColor" stroke-width="2.5"/>
+  <!-- 4x4 grid of pips; top-left brighter = "active" -->
+  <g fill="currentColor">
+    <circle cx="32" cy="32" r="4"/>
+    <circle cx="46" cy="32" r="2.5" opacity="0.55"/>
+    <circle cx="60" cy="32" r="2.5" opacity="0.55"/>
+    <circle cx="74" cy="32" r="2" opacity="0.3"/>
+    <circle cx="32" cy="46" r="2.5" opacity="0.55"/>
+    <circle cx="46" cy="46" r="2.5" opacity="0.55"/>
+    <circle cx="60" cy="46" r="2" opacity="0.3"/>
+    <circle cx="74" cy="46" r="2" opacity="0.3"/>
+    <circle cx="32" cy="60" r="2.5" opacity="0.55"/>
+    <circle cx="46" cy="60" r="2" opacity="0.3"/>
+    <circle cx="60" cy="60" r="2" opacity="0.3"/>
+    <circle cx="74" cy="60" r="2" opacity="0.3"/>
+    <circle cx="32" cy="74" r="2" opacity="0.3"/>
+    <circle cx="46" cy="74" r="2" opacity="0.3"/>
+    <circle cx="60" cy="74" r="2" opacity="0.3"/>
+    <circle cx="74" cy="74" r="2" opacity="0.3"/>
+  </g>
+</svg>

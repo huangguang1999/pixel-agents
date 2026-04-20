@@ -1,0 +1,20 @@
+{
+  "name": "logo-claude",
+  "description": "Claude starburst logo, 8x8 pixel approximation in Anthropic orange",
+  "width": 8,
+  "height": 8,
+  "palette": {
+    "_": "",
+    "O": "#D97757"
+  },
+  "pixels": [
+    ["_","_","_","O","O","_","_","_"],
+    ["_","O","_","O","O","_","O","_"],
+    ["_","_","O","O","O","O","_","_"],
+    ["O","O","O","O","O","O","O","O"],
+    ["O","O","O","O","O","O","O","O"],
+    ["_","_","O","O","O","O","_","_"],
+    ["_","O","_","O","O","_","O","_"],
+    ["_","_","_","O","O","_","_","_"]
+  ]
+}

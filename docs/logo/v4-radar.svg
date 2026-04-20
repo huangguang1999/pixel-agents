@@ -1,0 +1,23 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Variant 4: Radar Sweep
+       Central solid dot (the agent) with a quarter-arc sweep and ray
+       pips at its periphery. The sweep suggests "the state is being
+       actively observed" — time passing, status being read. -->
+  <g fill="none" stroke="currentColor" stroke-linecap="round">
+    <!-- Outer dashed ring: quiet frame -->
+    <circle cx="50" cy="50" r="34" stroke-width="1" stroke-dasharray="1 5" opacity="0.4"/>
+    <!-- Sweep arc: 90° wedge -->
+    <path d="M 50 22 A 28 28 0 0 1 78 50" stroke-width="3.5"/>
+    <!-- Short connector from arc end toward center -->
+    <path d="M 78 50 L 62 50" stroke-width="2"/>
+  </g>
+  <!-- Ray pips at N/E/S/W, the ones not on the sweep are dim -->
+  <g fill="currentColor">
+    <circle cx="50" cy="18" r="2.5"/>
+    <circle cx="82" cy="50" r="2.5"/>
+    <circle cx="50" cy="82" r="2" opacity="0.35"/>
+    <circle cx="18" cy="50" r="2" opacity="0.35"/>
+    <!-- Core agent dot -->
+    <circle cx="50" cy="50" r="5"/>
+  </g>
+</svg>

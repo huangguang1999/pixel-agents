@@ -1,0 +1,15 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Pixel Agents — primary logo (monochrome outline)
+       CRT monitor scan lines, suitable for light backgrounds.
+       Filled bars for small-size legibility. -->
+  <rect x="18" y="22" width="64" height="56" rx="5"
+        fill="none" stroke="currentColor" stroke-width="3"/>
+  <g fill="currentColor">
+    <rect x="22" y="29" width="56" height="4" rx="2"/>
+    <rect x="22" y="37" width="56" height="4" rx="2"/>
+    <rect x="22" y="45" width="40" height="4" rx="2"/>
+    <rect x="22" y="53" width="56" height="7" rx="3.5"/>
+    <rect x="22" y="64" width="46" height="4" rx="2"/>
+    <rect x="22" y="72" width="32" height="4" rx="2"/>
+  </g>
+</svg>

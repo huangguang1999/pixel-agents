@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<title>Pixel Agents — Logo Exploration</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    font-family:'Inter',-apple-system,sans-serif;
+    background:#F7F6F2;color:#1a1a1a;padding:64px 32px;
+  }
+  .mono{font-family:'JetBrains Mono',monospace}
+  h1{font-weight:600;font-size:32px;letter-spacing:-0.02em;margin-bottom:4px}
+  .subtitle{color:#666;font-size:14px;margin-bottom:8px}
+  .brief{color:#888;font-size:13px;max-width:620px;line-height:1.6;margin-bottom:48px}
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:24px;max-width:1280px;margin:0 auto;
+  }
+  .card{
+    background:#fff;border:1px solid #E8E5DE;border-radius:12px;
+    padding:32px;display:flex;flex-direction:column;
+    transition:all .3s ease;
+  }
+  .card:hover{transform:translateY(-2px);border-color:#1a1a1a;box-shadow:0 8px 24px rgba(0,0,0,0.06)}
+  .canvas{
+    aspect-ratio:1;background:#FAFAF7;border-radius:8px;
+    display:flex;align-items:center;justify-content:center;margin-bottom:20px;
+    color:#1a1a1a;
+  }
+  .canvas svg{width:50%;height:50%}
+  .canvas-dark{background:#1a1a1a;color:#f5f5f5}
+  .meta{display:flex;align-items:baseline;gap:8px;margin-bottom:6px}
+  .id{font-weight:600;font-size:11px;color:#999;letter-spacing:0.08em}
+  .name{font-weight:600;font-size:15px}
+  .desc{font-size:12px;color:#666;line-height:1.55;margin-bottom:12px}
+  .sizes{
+    display:flex;gap:12px;padding-top:12px;border-top:1px solid #F0ECE4;
+    align-items:center;color:#aaa;
+  }
+  .sizes svg{color:#1a1a1a}
+  .size-8 svg{width:8px;height:8px}
+  .size-16 svg{width:16px;height:16px}
+  .size-32 svg{width:32px;height:32px}
+  .tag{font-size:10px;color:#aaa;font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:0.1em}
+  header{max-width:1280px;margin:0 auto 48px}
+</style>
+</head>
+<body>
+<header>
+  <h1>Pixel Agents · Logo Exploration</h1>
+  <div class="subtitle mono">6 variants · core premise: visualize agent state</div>
+  <p class="brief">
+    每个变体都围绕同一个命题——"看见一个 agent 当前的状态"，避开 "pixel 办公室" 或 "多 agent 协作" 的表述。
+    hover 卡片看更小尺寸可读性。
+  </p>
+</header>
+
+<div class="grid">
+  <!-- v1 -->
+  <div class="card">
+    <div class="canvas" id="c1"></div>
+    <div class="meta"><span class="id mono">V1</span><span class="name">Status Beacon</span></div>
+    <div class="desc">同心圆从中心实心核辐射出去——agent 是内核，外环是它正在对外传递的状态。纯几何最克制。</div>
+    <div class="sizes">
+      <span class="tag">8/16/32px</span>
+      <span class="size-8" id="s1a"></span>
+      <span class="size-16" id="s1b"></span>
+      <span class="size-32" id="s1c"></span>
+    </div>
+  </div>
+  <!-- v2 -->
+  <div class="card">
+    <div class="canvas" id="c2"></div>
+    <div class="meta"><span class="id mono">V2</span><span class="name">Pixel A</span></div>
+    <div class="desc">字母 A 由圆角方块像素拼成，直接继承项目的像素艺术语言。每个 pixel 既是字形也是一个状态位的隐喻。</div>
+    <div class="sizes">
+      <span class="tag">8/16/32px</span>
+      <span class="size-8" id="s2a"></span>
+      <span class="size-16" id="s2b"></span>
+      <span class="size-32" id="s2c"></span>
+    </div>
+  </div>
+  <!-- v3 -->
+  <div class="card">
+    <div class="canvas" id="c3"></div>
+    <div class="meta"><span class="id mono">V3</span><span class="name">CRT Scanlines</span></div>
+    <div class="desc">圆角屏幕里粗细不等的横线——像老式监视器在读出 agent 的实时状态。中间最粗一条是"活动"焦点。</div>
+    <div class="sizes">
+      <span class="tag">8/16/32px</span>
+      <span class="size-8" id="s3a"></span>
+      <span class="size-16" id="s3b"></span>
+      <span class="size-32" id="s3c"></span>
+    </div>
+  </div>
+  <!-- v4 -->
+  <div class="card">
+    <div class="canvas" id="c4"></div>
+    <div class="meta"><span class="id mono">V4</span><span class="name">Radar Sweep</span></div>
+    <div class="desc">中心是 agent，外圈扫描弧 + 点位——表达"状态正在被持续观察"。含时间感，有动势。</div>
+    <div class="sizes">
+      <span class="tag">8/16/32px</span>
+      <span class="size-8" id="s4a"></span>
+      <span class="size-16" id="s4b"></span>
+      <span class="size-32" id="s4c"></span>
+    </div>
+  </div>
+  <!-- v5 -->
+  <div class="card">
+    <div class="canvas" id="c5"></div>
+    <div class="meta"><span class="id mono">V5</span><span class="name">Status Badge</span></div>
+    <div class="desc">圆角卡片框住 4×4 状态点阵，左上最亮代表"当前激活位"。抽象的"身份证 + 状态灯"组合。</div>
+    <div class="sizes">
+      <span class="tag">8/16/32px</span>
+      <span class="size-8" id="s5a"></span>
+      <span class="size-16" id="s5b"></span>
+      <span class="size-32" id="s5c"></span>
+    </div>
+  </div>
+  <!-- v6 -->
+  <div class="card">
+    <div class="canvas canvas-dark" id="c6"></div>
+    <div class="meta"><span class="id mono">V6</span><span class="name">Observed Node</span></div>
+    <div class="desc">中心主节点被三个外围观察者围住——直白的"一个 agent 被多角度看见"的拓扑。夜间卡反转看效果。</div>
+    <div class="sizes">
+      <span class="tag">8/16/32px</span>
+      <span class="size-8" id="s6a"></span>
+      <span class="size-16" id="s6b"></span>
+      <span class="size-32" id="s6c"></span>
+    </div>
+  </div>
+</div>
+
+<script>
+const files = ['v1-beacon','v2-pixel-a','v3-scanlines','v4-radar','v5-badge','v6-observed'];
+files.forEach((name, idx) => {
+  fetch(name + '.svg').then(r => r.text()).then(svg => {
+    const n = idx + 1;
+    document.getElementById('c' + n).innerHTML = svg;
+    document.getElementById('s' + n + 'a').innerHTML = svg;
+    document.getElementById('s' + n + 'b').innerHTML = svg;
+    document.getElementById('s' + n + 'c').innerHTML = svg;
+  });
+});
+</script>
+</body>
+</html>

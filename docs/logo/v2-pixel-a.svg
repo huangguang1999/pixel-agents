@@ -1,0 +1,28 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Variant 2: Pixel "A" on a grid
+       Native to the project's pixel-art language. 9x9 grid of rounded
+       squares, a subset filled to form the letter A. The grid itself
+       is the "monitor" — every pixel is a potential state readout. -->
+  <g fill="currentColor">
+    <!-- Row 2 (A crown) -->
+    <rect x="42" y="22" width="8" height="8" rx="1.5"/>
+    <rect x="50" y="22" width="8" height="8" rx="1.5"/>
+    <!-- Row 3 -->
+    <rect x="34" y="32" width="8" height="8" rx="1.5"/>
+    <rect x="58" y="32" width="8" height="8" rx="1.5"/>
+    <!-- Row 4 -->
+    <rect x="26" y="42" width="8" height="8" rx="1.5"/>
+    <rect x="66" y="42" width="8" height="8" rx="1.5"/>
+    <!-- Row 5 (crossbar) -->
+    <rect x="34" y="52" width="8" height="8" rx="1.5"/>
+    <rect x="42" y="52" width="8" height="8" rx="1.5"/>
+    <rect x="50" y="52" width="8" height="8" rx="1.5"/>
+    <rect x="58" y="52" width="8" height="8" rx="1.5"/>
+    <!-- Row 6 -->
+    <rect x="26" y="62" width="8" height="8" rx="1.5"/>
+    <rect x="66" y="62" width="8" height="8" rx="1.5"/>
+    <!-- Row 7 (legs) -->
+    <rect x="18" y="72" width="8" height="8" rx="1.5"/>
+    <rect x="74" y="72" width="8" height="8" rx="1.5"/>
+  </g>
+</svg>
