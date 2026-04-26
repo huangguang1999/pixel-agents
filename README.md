@@ -46,9 +46,7 @@ Then launch once and every Claude / Codex / Grok session afterwards shows up as 
 
 ### Hook up Claude Code / Codex / Grok
 
-The first time you launch the Tauri app it writes hook entries into whichever of these config files exist: `~/.claude/settings.json`, `~/.codex/hooks.json`, `~/.grok/user-settings.json`. Each entry is tagged with a `*-hook-forward.py` marker — your existing hooks are left alone. From then on every `claude` / `codex` / `grok` session shows up as a pixel character.
-
-> **Codex only**: also requires `[features]\ncodex_hooks = true` in `~/.codex/config.toml`. The installer only warns if the flag is missing — it won't touch the file itself.
+The first time you launch the Tauri app it writes hook entries into whichever of these config files exist: `~/.claude/settings.json`, `~/.codex/hooks.json`, `~/.grok/user-settings.json`. Each entry is tagged with a `*-hook-forward.py` marker — your existing hooks are left alone. For Codex it additionally enables the `[features] codex_hooks = true` flag in `~/.codex/config.toml` if missing, since hooks are gated on it. From then on every `claude` / `codex` / `grok` session shows up as a pixel character — no manual config required.
 
 ### Multiple sessions in the same repo
 

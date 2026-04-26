@@ -109,7 +109,7 @@ src-tauri/src/
 ├── adapter/codex.rs             Codex CLI hook（tool 名做 shell→Bash 等映射）
 ├── adapter/grok.rs              Grok CLI hook（PostToolUseFailure 等变体折叠）
 ├── installer.rs                 启动时改三个 CLI 的 settings（~/.claude、~/.codex、~/.grok），
-│                                Codex 会额外检查 config.toml `[features] codex_hooks = true`
+│                                Codex 顺便自动启用 config.toml 里 `[features] codex_hooks = true`
 └── reaper.rs                    清理死掉的 session（kill -0 检测 PID）
 
 scripts/
@@ -189,7 +189,7 @@ gameLoop 每帧 update(dt) → render(ctx)
 11. **Single-instance IPC**：`ipc.rs:spawn_listener` 先 `UnixStream::connect` 探测，命中则直接 return 不抢 socket。两个 app 同时跑不会互相拉黑，但只有先起的那个能收事件。
 12. **Agent identity**：`Character.folderName` = `basename(ev.cwd)`，`Character.sessionShortId` = UUID 的第 20–24 位 hex（跳过 UUIDv7 时间戳前缀）。`agentDisplayLabel(ch, roster)` 仅在 folder 撞车时才拼 `·<shortId>`。源头在 `officeState.setAgentIdentity`，被 `agentEventDispatch` 在 session_start + pre_tool_use 两处调用。
 13. **角色间碰撞**：A* 只绕家具，不绕活人。`characters.ts:WALK` 每帧扫 `liveCharacters`：下一格被占住且 `moveProgress < 0.5` 时不推进、累加 `stallSec`；超过 `WALK_STALL_MAX_SEC`（1.5s）就清 `path` 让 FSM 重规划，打破头对头死锁。
-14. **Codex feature flag**：Codex hook 要开 `[features] codex_hooks = true` 才会触发。`installer.rs:warn_if_codex_feature_missing` 只警告不自动改文件——不 own 用户配置。
+14. **Codex feature flag**：Codex hook 要开 `[features] codex_hooks = true` 才会触发，`installer.rs:ensure_codex_feature_enabled` 会自动补这一行——缺 `[features]` section 就追加新块，已存在但缺 key 就插一行；用户显式写了 `= false` 则尊重不改。其他 feature flag 一律不动。
 
 ---
 
@@ -288,7 +288,7 @@ npm run build              # tsc + vite build（产 dist/）
 | `npm run dev` 报 `crypto.hash is not a function` | — | Node < 20.19，切到 v22 |
 | 角色坐到别人工位上 | — | blockedTiles 自己的座位要 `withOwnSeatUnblocked` |
 | 两个 app 同时跑，第一个收不到事件 | `ipc.rs` | 后启动的 `remove_file + bind` 会把先前的 listener 架空。现已加 connect 探测 |
-| 接了 Codex 但看不到事件 | `~/.codex/config.toml` | 要手动加 `[features]\ncodex_hooks = true`，installer 只警告不自动写 |
+| 接了 Codex 但看不到事件 | `~/.codex/config.toml` | installer 自动补 `[features] codex_hooks = true`；用户显式 `= false` 则不覆盖（看 stderr 提示） |
 | 角色走到工位途中"假装在打字" | `officeState.ts:routeToSeat` | 无路径且未到座位时保持原状态，不要进 TYPE |
 | 同 repo 两个 Claude 看不清哪个是哪个 | `agentLabel.ts:agentDisplayLabel` | folder 撞车时自动追加 `·<sessionShortId>` |
 | Codex 思考窗口（UserPromptSubmit → PreToolUse 之间）显示"空闲" | `agentLabel.ts:verbKeyFor` | `isActive` 为真时兜底为 "working" |

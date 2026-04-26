@@ -46,9 +46,7 @@
 
 ### Claude Code / Codex / Grok 接入
 
-第一次启动 Tauri app，会向存在的 CLI 配置文件里自动写入 hook 入口：`~/.claude/settings.json` / `~/.codex/hooks.json` / `~/.grok/user-settings.json`。每条带 `*-hook-forward.py` marker，不会覆盖你的其他 hook。之后每个 `claude` / `codex` / `grok` 会话都会显示成像素小人。
-
-> **Codex 额外一步**：需要在 `~/.codex/config.toml` 里手动加 `[features]\ncodex_hooks = true`，hook 才会真的触发。installer 只在缺失时 stderr 警告，不会自动改你的 config。
+第一次启动 Tauri app，会向存在的 CLI 配置文件里自动写入 hook 入口：`~/.claude/settings.json` / `~/.codex/hooks.json` / `~/.grok/user-settings.json`。每条带 `*-hook-forward.py` marker，不会覆盖你的其他 hook。Codex 还会顺手在 `~/.codex/config.toml` 里启用 `[features] codex_hooks = true`（hook 触发的前置开关），缺什么补什么。装完之后每个 `claude` / `codex` / `grok` 会话都会显示成像素小人，不用任何手动配置。
 
 ### 同 repo 多会话的区分
 
